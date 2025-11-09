@@ -1,0 +1,126 @@
+.light-body {
+    background: #f4f6fb;
+    color: #333;
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 40px 10px;
+    background: #ffffff;
+    border-bottom: 1px solid #d7dce3;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #1a3d7c;
+}
+
+.header p {
+    margin-top: 5px;
+    color: #56627d;
+    font-size: 15px;
+}
+
+.card {
+    width: 90%;
+    max-width: 800px;
+    background: #ffffff;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border: 1px solid #e3e6ee;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #1a3d7c;
+}
+
+.city-list {
+    list-style: none;
+    padding: 0;
+}
+
+.city-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.city-list a {
+    text-decoration: none;
+    color: #1a3d7c;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.city-list a:hover {
+    color: #113066;
+    text-decoration: underline;
+}
+
+/* ========================== Pagination=========================== */
+.pages { text-align: center; margin-top: 25px; }
+
+.pages a {
+    padding: 8px 14px;
+    margin: 4px;
+    background: #1a3d7c;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s ease-in-out;
+}
+
+.pages a.active,
+.pages a:hover {
+    background: #0f2a56;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-table th,
+.info-table td {
+    padding: 12px;
+    border-bottom: 1px solid #d9dce3;
+}
+
+.info-table th {
+    background: #eef2f8;
+    color: #1a3d7c;
+    font-weight: bold;
+    width: 40%;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 14px;
+    color: #5e6a80;
+    margin-top: 40px;
+}
+
+.footer a { color: #1a3d7c; }
+
+/* ========================== CSS Animations=========================== */
+.fade-in { animation: fade 0.8s ease-in-out; }
+.slide-up { animation: slideUp 0.8s ease-out; }
+/* ========================== responsive=========================== */
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(25px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
