@@ -1,7 +1,20 @@
 <?php
 require __DIR__ . '/inc/all.inc.php';
 
-render('city.view', []);
+$id = (int)($_GET['id']??0);
+
+$WorldCityRepository = new WorldCityRepository($pdo);
+$city = $WorldCityRepository->fetchById($id);
+
+if(empty($city)){
+    header('location:index.php');
+    die();
+}
+
+
+render('city.view', [
+    'city'=>$city
+]);
 
 ?>
 

@@ -9,7 +9,7 @@
 <body class="light-body">
 
 <header class="header">
-    <h1>Cities explorer</h1>
+    <h1><a href="index.php">Cities explorer</a></h1>
     <p>Explore and find cities</p>
 </header>
 <?php echo $contents;?>

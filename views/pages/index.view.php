@@ -4,16 +4,26 @@
     <ul class="city-list">
         <?php foreach($entries as $city ): ?>
         <li>
-            <a href="city.php">
-                <?php echo e($city->city); ?> (<?php echo e($city->country); ?>)
+            <a href="city.php?<?php echo http_build_query(['id'=>$city->id]); ?>">
+                <?php echo $city->getCityWithCountry(); ?>
             </a>
         </li>
         <?php endforeach; ?>
     </ul>
 
     
-    <div class="pages">
-        <a class="active">1</a><a>2</a><a>3</a><a>4</a><a>5</a>
-    </div>
+    <ul class="pages">
+          <?php if($pagination['page']>1): ?>
+            <li>
+              <a href="index.php?<?php echo http_build_query([ 'page'=> $pagination['page']-1]); ?>">⏴</a>
+            </li>
+          <?php endif; ?>
+          <?php if($pagination['page']<$pagination['pagesNum']): ?>
+            <li>
+              <a href="index.php?<?php echo http_build_query([ 'page'=> $pagination['page']+1]); ?>">⏵</a>
+            </li>
+          <?php endif; ?>
+
+    </ul>
 </section>
 
